@@ -8,60 +8,88 @@ import { Search } from 'lucide-react';
 
 const allSpeakers = [
   {
-    name: 'Majid Almegil',
-    role: 'Chief Technology Officer',
-    company: 'Innovation Hub',
+    name: 'Ali Naseer',
+    role: 'Chief Strategy Officer',
+    company: 'Jazz',
     type: 'Keynote Speaker',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLuHkSGDJTaWIZcX99EYZM5wrzf3eDoGKeTCObbgfN71EN-O6xCsbqM0QfN8amCzUR7C694lnJXCfjytYAeh0HtYbVqgocxSJkHtRESWCBn9RlLpb9mbwPbPO3BNDO785dQ3cxLG1wsmJRtlCZYIrrFrGoyuhqFIvDDFNNGaZGN2PzQNQYUb7u1DUsW6v2abSaRxQ0Ygs2u9fYdr7wIYxvzx4MAlFQpe1zQWsRaiQLR6vCYQXrWyUP3Ao0I1',
+    image: '/speakers/alinaseer.png',
   },
   {
-    name: 'Huda Al-Abbar',
-    role: 'Director of AI Strategy',
-    company: 'Global Data Corp',
+    name: 'Samia Qamar',
+    role: 'Director, People',
+    company: 'S&P Global',
+    type: 'Keynote Speaker',
+    image: '/speakers/samia.png',
+  },
+  {
+    name: 'Tahira Khattak',
+    role: 'Director HR Business Partnering',
+    company: 'Telenor',
+    type: 'Keynote Speaker',
+    image: '/speakers/tahira.jpg',
+  },
+  {
+    name: 'Haroon Kanth',
+    role: 'Country Director',
+    company: 'Teradata Global',
     type: 'Panelist',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLsTGwUmWDh3hnP2pQhIRrCnjvPnLHCC-gSMfYZhd6EDF0PybYnCLszVHRGgji4m-vjge373GYoH9ApxGeOVoaMGsoGZAj6nx4ZGIhX3xiVQxuKjxeCJ3GGCD2CA81Tt3drdTAPIiNEkQG4P_xmbArtL5U1Tvb5lHyMymKmWhyHV3RAXY_WzrKf6zx17YA3yC1wazBdmgKtXMXVq4K7ZqAiOOZ4-dMv8KzFx9Ht3S0wrFMbMAQVIj0QNhUw',
+    image: '/speakers/haroon.png',
   },
   {
-    name: 'Azzah AlSharhan',
+    name: 'Amjad Iqbal',
+    role: 'Group VP Business Growth Partners',
+    company: 'PTCL',
+    type: 'Panelist',
+    image: '/speakers/amjad-iqbal.jpg',
+  },
+  {
+    name: 'Sana Hassan',
     role: 'Head of People & Culture',
-    company: 'Future Talent Systems',
-    type: 'Workshop Lead',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLsbGwy7B_ac7TPSJ617BPlOssifbIcfGyj8Lh25UbOZ40UMSUUFoCOLWskS_3RIoD8oWzIrhm76oMAPmhmt6f4bMN1BFcs6TTjWPw5Eo_t2mKiWkDXZJ2mtICdHF3okmFU8OYvpYIpwWcNNBHl7PngWNxxQWPphZioZM2e7dbMpZkWzq9H85Fttm62VPYPHZrZCzOiKgRKfdD9vQtxfvcXUdyV1-6UgwiZLcPWrRlWpQWNGHWaHTg6J377o',
-  },
-  {
-    name: 'Marie-Louise Ek',
-    role: 'VP HR EEMEA',
-    company: 'Hilton Worldwide',
-    type: 'Keynote Speaker',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLtlg1OQG9DoPN_0t1g7Vg0nsPXj6ngEeWITLi1kVymjG4StOO9StnjzKEo8f_aZ5oE8__9A_xg77i5orXhoz44XkSBR_J4V8wDyFU46-E71AQNg_-xzdrmdV4TUZxfxOmyctqMQTbpoLnhrRajRwjdbVlZuNwUGoOcORluC-uBTT-quCbyn7Kc4qYGaLjEiuY7mRjieAA51t-wSAacoCBN1MEFTd-EaiqoibLFp6-8wYpb0u2zEWB0Ud4I',
-  },
-  {
-    name: 'Nate Busa',
-    role: 'Founder & CEO',
-    company: 'Quantum Logic',
+    company: 'Wateen',
     type: 'Panelist',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLttEifia0nqwLGoaTwkMmH6DR6JLEztvVjj1yuGOSkxi1g7TXZnp1XT9dMHcRzh44aaOEeouwMYWy5Tw9_RUoIhf_S0w_28mzU_xTzi7NpQZpl56xhCq0FxMn4Zv2XkFwHZcpauqlGwzaGWlygv2eYrTcL65pd9Sy4pjGGHNAopalaXb-mYWKgLzKbAnMp9voqm1Pkh5X6bqqpsOxwAnFcFFh-OR7O1QelmAXuRUmB3YtxXBmoW8gd2Bi1d',
+    image: '/speakers/sana-hassan.jpg',
   },
   {
-    name: 'Betul Yalcin Emlek',
-    role: 'Sr. HR Business Partner',
-    company: 'Tech Dynamics',
-    type: 'Panelist',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLu0kW9d4STxlvKhGwnMRYb8ncYKR-x9RBhPf3t4UjVFhWZefnfklmN7oDFlo8C27chi5N1IBamIdBFoEYTYHmoUG3WdE0ozV7cFe59ZnQ6HBxNuSicHRoI2aFF7dAHSpuN9HzQSmjsssLzA3PAgj8dzj6r4F9-yhZW_tXtlH0yxeSZuLjqj8O7gCDTya61bwKhFwJZ-dBQRX1RonsQIY0CHIwaZqrRz-A3ZN-3gCsYCqbhg0YxfjPlBb_20',
-  },
-  {
-    name: 'Jacob Jacob',
-    role: 'Chief People Officer',
-    company: 'Miral Asset Management',
+    name: 'Abdul Khaliq Khan',
+    role: 'Head Talent & Org. Development',
+    company: 'HBL',
     type: 'Keynote Speaker',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLswMyX9f5SV_WUiMuoFzWrtFJX2IDOhI-Upyl3xRXkr0RVii_u9SSfCCAf5tduuFVoqQtI4rKTadGbtzKcy4vKhvRvOtAS2loBlEfFyISEMnFD5SK_gdeMayARTSMOULMWyt9xwhVIAQp3pBPKPS4tQZ6tqa9bE0Ke4Sk8Mnhvs4ON-c3AcyYAq7AHopHsVX1rUYZhobR5Hk_EHnNOCTHodkfGEjzx806A8ZXipWlDYpXsDGKFdLV1s_6Mn',
+    image: '/speakers/abdulkhaliq.jpg',
   },
   {
-    name: 'Yusra Baqi',
-    role: 'VP Human Capital',
-    company: 'Aramco Digital',
+    name: 'Sonia Saleem',
+    role: 'Founder',
+    company: 'Socio Engineering Technologies',
+    type: 'Panelist',
+    image: '/speakers/soniasaleem.jpg',
+  },
+  {
+    name: 'Muhammad Ali',
+    role: 'General Manager',
+    company: 'NUST PDC',
     type: 'Workshop Lead',
-    image: 'https://lh3.googleusercontent.com/aida/AP1WRLshadgfGBVOSsLq-q6jhnvlyPiP17WHHNe3RK4bZX2BmkzE4W3qUQq3xIQLFx2aMFcVWDtDErkbcTFnd0mODNTF_56ESQ7hSxn7oDCwYAmsfgHZR8dGCmSIRLTIrm_piAIFnfO1KylDEKxp-C-tKS6OFRC6l-HQ1Twu3kLEJ3XkKh9-uCLhUUQQrlNJD3GgvYFtzxsqaYdf5Wh0NLkJXQf0HdlMbzTArP5jhTBMYd_P3QK0_cwREtmCsCoj',
+    image: '/speakers/muhammadalikhan.jpg',
+  },
+  {
+    name: 'Erum Rizvi',
+    role: 'Communications Consultant',
+    company: 'AdVentures',
+    type: 'Workshop Lead',
+    image: '/speakers/erumrizvi.jpg',
+  },
+  {
+    name: 'Parvez Abbasi',
+    role: 'Founder',
+    company: 'AdVentures',
+    type: 'Keynote Speaker',
+    image: '/speakers/parvezabbasi.jpg',
+  },
+  {
+    name: 'Kamran Z. Rizvi',
+    role: 'Co-founder',
+    company: 'Carnelian',
+    type: 'Keynote Speaker',
+    image: '/speakers/kamranrizvi.png',
   },
 ];
 
@@ -113,11 +141,10 @@ export default function SpeakersPage() {
               <button
                 key={category}
                 onClick={() => setActiveFilter(category)}
-                className={`font-label-caps text-label-caps py-4 uppercase transition-all ${
-                  activeFilter === category
+                className={`font-label-caps text-label-caps py-4 uppercase transition-all ${activeFilter === category
                     ? 'text-primary border-b-2 border-primary'
                     : 'text-text-muted hover:text-on-surface'
-                }`}
+                  }`}
               >
                 {category}
               </button>

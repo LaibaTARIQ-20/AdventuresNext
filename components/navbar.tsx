@@ -3,12 +3,12 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/speakers', label: 'Speakers' },
-  { href: '/schedule', label: 'Schedule' },
-  { href: '/attendees', label: 'Attendees' },
+  { href: '/UpcomingEvents', label: 'Upcoming Events' },
 ];
 
 export default function Navbar() {
@@ -25,28 +25,22 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 glass-nav border-b border-border-default transition-all duration-300 ${
-        isScrolled ? 'shadow-xl border-primary/10' : ''
-      }`}
+      className={`fixed top-0 w-full z-50 glass-nav border-b border-border-default transition-all duration-300 ${isScrolled ? 'shadow-xl border-primary/10' : ''
+        }`}
     >
       <div className="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="flex items-center gap-2">
-          <Link href="/" className="group relative flex items-center transition-all duration-300 hover:scale-105">
-            <span className="font-display-md text-2xl md:text-3xl font-black tracking-tighter uppercase flex items-center group-hover:drop-shadow-[0_0_8px_rgba(255,107,0,0.5)]">
-              <span className="text-white">NE</span>
-              <span className="text-primary-container relative overflow-hidden">
-                X
-                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full animate-pulse-slow" />
-              </span>
-              <span className="text-white">T</span>
-            </span>
+          <Link href="/" className="group relative flex flex-col items-start transition-all duration-300 hover:scale-105">
+            <Image
+              src="/logo.svg"
+              alt="NEXT Summit"
+              width={140}
+              height={40}
+              className="h-9 w-auto group-hover:drop-shadow-[0_0_8px_rgba(255,107,0,0.5)] transition-all"
+              priority
+            />
           </Link>
-          <span className="hidden md:block font-label-caps text-[10px] mt-1 tracking-widest uppercase">
-            <span className="text-primary-container">Ad</span>
-            <span className="text-white/60">Ventures</span>
-          </span>
         </div>
-
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8 items-center">
           {navLinks.map((link) => (
@@ -59,10 +53,10 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/#register"
+            href="#register"
             className="bg-primary-container text-white px-6 py-2 rounded-full font-bold hover:brightness-110 active:scale-95 hover:shadow-[0_0_15px_rgba(255,107,0,0.4)] transition-all"
           >
-            Get Tickets
+            Join NEXT
           </Link>
         </div>
 
