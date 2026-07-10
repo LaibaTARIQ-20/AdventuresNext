@@ -33,6 +33,8 @@
 }
 
 @layer components {
+
+  /* ---------- Existing glass/mesh utilities ---------- */
   .glass-card {
     background: rgba(26, 31, 45, 0.65);
     backdrop-filter: blur(16px);
@@ -49,7 +51,7 @@
   .glass-nav {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: rgba(8, 13, 26, 0.85);
+    background: rgba(15, 15, 18, 0.85);
   }
 
   .dot-grid {
@@ -81,10 +83,169 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* ---------- Brand-correct premium design system ---------- */
+
+  /* Gradient text — orange family only, per brand guide */
+  .gradient-text-pop {
+    background: linear-gradient(90deg, #FF914D 0%, #FFB78A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Softer variant for secondary highlights */
+  .gradient-text-warm {
+    background: linear-gradient(90deg, #FFB78A 0%, #FF914D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Blurred gradient orb — navy-to-orange blend for background depth */
+  .glow-orb {
+    background: radial-gradient(circle, rgba(255, 145, 77, 0.35) 0%, rgba(26, 95, 149, 0.25) 45%, transparent 70%);
+    filter: blur(60px);
+  }
+
+  /* Subtle grain overlay for texture on dark sections */
+  .grain-overlay {
+    position: relative;
+  }
+
+  .grain-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Gradient border — navy-to-orange glowing edge for featured cards */
+  .gradient-border {
+    position: relative;
+    border-radius: 1rem;
+    background: rgba(26, 31, 45, 0.65);
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(255, 145, 77, 0.6), rgba(26, 95, 149, 0.5), transparent 70%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Shimmering badge — orange sweep */
+  .badge-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgba(255, 145, 77, 0.15), rgba(26, 95, 149, 0.12));
+    border: 1px solid rgba(255, 145, 77, 0.3);
+  }
+
+  .badge-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+    animation: shimmer-sweep 3s ease-in-out infinite;
+  }
+
+  .btn-gradient-animated {
+    background: linear-gradient(135deg, #FFA660 0%, #FF6B00 55%, #E85A00 100%);
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+    box-shadow:
+      0 6px 20px rgba(255, 107, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25),
+      inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 178, 102, 0.4);
+  }
+
+  /* Deep navy gradient background — per brand guide */
+  .bg-navy-gradient {
+    background: linear-gradient(135deg, #0A042D 0%, #1A5F95 100%);
+  }
+
+  /* Navy + orange ambient section wash — layered, not flat */
+  .section-navy-glow {
+    background:
+      radial-gradient(ellipse 900px 500px at 15% 10%, rgba(26, 95, 149, 0.3), transparent),
+      radial-gradient(ellipse 700px 500px at 90% 90%, rgba(255, 145, 77, 0.18), transparent),
+      #0A042D;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes shimmer-sweep {
+  0% {
+    left: -150%;
+  }
+
+  60% {
+    left: 150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float-slow {
+
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
 }
